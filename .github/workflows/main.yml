@@ -39,6 +39,7 @@ jobs:
 
       - name: Build with Gradle
         run: gradle clean build --no-daemon
+        working-directory: ./
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
