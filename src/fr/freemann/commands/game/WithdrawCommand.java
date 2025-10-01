@@ -16,11 +16,11 @@ public class WithdrawCommand implements CommandExecutor {
             if(player.getMaxHealth() > 2) {
                 player.setMaxHealth(player.getMaxHealth() - 2);
                 player.getInventory().addItem(CustomItems.getHearthItem());
-                player.sendMessage("§6[Freemann Life Steal]§c Heart§b withdrawn §a with success !");
+                player.sendMessage("Â§6[Freemann Life Steal]Â§c HeartÂ§b withdrawn Â§a with success !");
                 player.updateInventory();
             }
         }else {
-            sender.sendMessage("§6[Freemann Life Steal]§c You are not a player");
+            sender.sendMessage("Â§6[Freemann Life Steal]Â§c You are not a player");
         }
         return false;
     }
