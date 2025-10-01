@@ -11,7 +11,7 @@ public class CustomItems {
     public static ItemStack getHearthItem() {
         ItemStack hearthItem = new ItemStack(Material.NETHER_STAR);
         ItemMeta hearthM = hearthItem.getItemMeta();
-        hearthM.setDisplayName("§cHeart");
+        hearthM.setDisplayName("Â§cHeart");
         hearthItem.setItemMeta(hearthM);
         return hearthItem;
     }
@@ -20,7 +20,7 @@ public class CustomItems {
         ItemMeta diamondM = EnchantedDiamondBlock.getItemMeta();
         diamondM.addEnchant(Enchantment.OXYGEN, 1, true);
         diamondM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        diamondM.setDisplayName("§bEnchanted diamond block");
+        diamondM.setDisplayName("Â§bEnchanted diamond block");
         EnchantedDiamondBlock.setItemMeta(diamondM);
         return EnchantedDiamondBlock;
     }
