@@ -19,6 +19,7 @@ public class PluginListeners implements Listener {
 
     @EventHandler
     public void playerInteract(PlayerInteractEvent e) {
+        if (e.getHand() != EquipmentSlot.HAND) return;
         Player player = e.getPlayer();
         ItemStack it = e.getItem();
         if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
@@ -31,7 +32,7 @@ public class PluginListeners implements Listener {
                     player.getItemInHand().setAmount(player.getItemInHand().getAmount() - 1);
                     }
                     player.updateInventory();
-                    player.sendMessage("§6[Freemann Life Steal]§a You gaind one §cheart");
+                    player.sendMessage("Â§6[Freemann Life Steal]Â§a You gaind one Â§cheart");
                 }
             }
         }
@@ -42,7 +43,7 @@ public class PluginListeners implements Listener {
         if(player.getMaxHealth() <= 2) {
             player.setGameMode(GameMode.SPECTATOR);
             World world = player.getWorld();
-            Bukkit.broadcastMessage("§6[Freemann Life Steal]§b " + player.getDisplayName() + "§a just died forever");
+            Bukkit.broadcastMessage("Â§6[Freemann Life Steal]Â§b " + player.getDisplayName() + "Â§a just died forever");
             for(Player players : Bukkit.getOnlinePlayers()) {
             world.playSound(players.getLocation(), Sound.WITHER_SPAWN, 1.0F, 1.0F);
             }
@@ -58,3 +59,4 @@ public class PluginListeners implements Listener {
         }
     }
 }
+
