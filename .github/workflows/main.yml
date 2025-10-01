@@ -37,6 +37,9 @@ jobs:
           restore-keys: |
             gradle-${{ runner.os }}-
 
+      - name: Clanker work clanker
+        run: cd ..
+
       - name: Build with Gradle
         run: gradle clean build --no-daemon
         working-directory: ./
