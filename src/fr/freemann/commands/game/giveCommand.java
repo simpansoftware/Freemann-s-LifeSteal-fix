@@ -17,7 +17,7 @@ public class giveCommand implements CommandExecutor {
                 player.getInventory().addItem(CustomItems.getHearthItem());
             }
         }else {
-            sender.sendMessage("§6[Freemann Life Steal]§a You are not §bop §aon this server");
+            sender.sendMessage("Â§6[Freemann Life Steal]Â§a You are not Â§bop Â§aon this server");
         }
         return false;
     }
