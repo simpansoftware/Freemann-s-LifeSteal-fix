@@ -38,7 +38,7 @@ jobs:
             gradle-${{ runner.os }}-
 
       - name: Clanker work clanker
-        run: cd ..
+        run: tree
 
       - name: Build with Gradle
         run: gradle clean build --no-daemon
