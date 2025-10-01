@@ -17,7 +17,7 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         
-        Bukkit.broadcastMessage("§6[Freemann Life Steal]§a Starting Plugin ...");
+        Bukkit.broadcastMessage("Â§6[Freemann Life Steal]Â§a Starting Plugin ...");
         
         
         
@@ -31,12 +31,12 @@ public class Main extends JavaPlugin implements Listener {
         getCommand("withdraw").setExecutor(new WithdrawCommand());
         
         
-        //Recipes
+        //Recipees
         EnchantedDiamond.InitEnchantedDiamondBlockRecipe();
         Heart.InitHeartRecipe();
         
         
-        Bukkit.broadcastMessage("§6[Freemann Life Steal]§a Plugin started with §bsucess");
+        Bukkit.broadcastMessage("Â§6[Freemann Life Steal]Â§a Plugin started with Â§bsucess");
     }
     
     @Override
@@ -45,3 +45,4 @@ public class Main extends JavaPlugin implements Listener {
     }
     
 }
+
