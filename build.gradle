@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.simpansoftware'
+group = 'fr.freemann'
 version = '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -17,10 +17,19 @@ dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT'
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+        resources {
+            srcDirs = ['src']
+            include 'plugin.yml'
+        }
+    }
 }
 
 jar {
     archiveBaseName.set('LifeStealPlugin')
+    from sourceSets.main.output
 }
