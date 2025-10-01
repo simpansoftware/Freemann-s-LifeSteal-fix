@@ -1,4 +1,4 @@
-name: Build Minecraft Plugin
+name: Build Minecraft Plugin (or not)
 
 on:
   push:
